@@ -1,0 +1,540 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Direcci&oacute;n Nacional Electoral | Elecciones Argentinas</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="css/960.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/menu-style.css" rel="stylesheet" type="text/css" media="screen"> 
+<link rel="stylesheet" href="css/superfish.css" type="text/css" media="screen">
+<link rel="stylesheet" href="estilos/menu/dropdown.css"/>
+<link rel="stylesheet" href="estilos/menu/default.advanced.css"/>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/jquery.hoverIntent.js"></script>
+<script src="js/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+<style type="text/css">
+body,td,th {
+	font-family: "OpenSans Regular";
+}
+a:link {
+	text-decoration: none;
+	color: #08446c;
+	font-weight: bold;
+}
+a:visited {
+	text-decoration: none;
+	color: #08446c;
+}
+a:hover {
+	text-decoration: none;
+	color: #00aeef;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+
+
+
+<script>
+jQuery(document).ready(function(){
+    $('map > area.fancybox').click(function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        var title = $(this).attr('title');
+        var type = $(this).attr('rel');
+        $.fancybox({
+            'title': title,
+            'titlePosition': 'inside',
+            'href' : url,
+            'type' : type
+        });
+    });
+<!-- fancy box -->
+jQuery("a.myFancyBoxClass").fancybox({
+'transitionIn': 'elastic',
+'transitionOut': 'elastic',
+'speedIn': 600,
+'speedOut': 200,
+'type': 'iframe'
+});
+
+})
+
+function update()
+{
+var newLink = document.myFormName.mySelectName.value;
+document.getElementById("myCustomLink").href = newLink;
+return;
+}
+</script>
+
+<script>
+  jQuery(document).ready(function(){
+    jQuery('.menu').superfish();
+  });
+</script>
+
+
+<script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524892b7520e3e60" async="async"></script>
+
+
+<script type='text/javascript'>
+$(function(){
+$('input').click(function(){
+var ourText = $('.parrafo-nota');
+var currFontSize = ourText.css('fontSize');
+var finalNum = parseFloat(currFontSize, 10);
+var stringEnding = currFontSize.slice(-2);
+if(this.id == 'agrandar') {
+finalNum *= 1.1;
+}
+else if (this.id == 'achicar'){
+finalNum /=1.1;
+}
+else if (this.id == 'normal'){
+finalNum =12;
+}
+ourText.animate({fontSize: finalNum + stringEnding},500);
+});
+});
+</script>
+
+
+
+
+</head>
+
+<body>
+<div id="contenedor">
+
+  <div id="redes">
+    
+    <div id="iconos-redes"> <a href="https://www.facebook.com/InfoDINE"><img src="images/icono-facebook.png" width="30" height="30" alt="icono facebook"/></a> 
+    
+    <a href="https://twitter.com/infoDINE"><img src="images/icono-twitter.png" width="30" height="30" alt="icono twitter"/></a>
+    
+     <a href="https://www.youtube.com/user/InfoDINETV"><img src="images/icono-youtube.png" width="30" height="30" alt="icono youtube"/></a> 
+    
+     <a href="contacto.php"><img src="images/icono-contacto.png" width="35" height="35" alt="contacto"/></a> 
+        <a href="alto-contraste/index.php"><img src="images/icono-contraste.png" width="35" height="35" alt="icono alto contraste"/></a>
+
+     <a href="accesibilidad.php"><img src="images/icono-accesibilidad.png" width="35" height="35" alt="icono accesiblidad"/></a>
+    </div>
+    </div>
+    
+    <div id="banner-top">
+    
+      <div id="logo-dine"><img src="images/logo-dine.png" alt="logo DINE" width="321" height="110" /></div>
+      
+      <div id="logo-elecciones"><a href="index.php"><img src="images/logo-elecciones.png" alt="logo Elecciones Argentinas" width="321" height="110" /></a></div>
+      
+      <div id="buscador">
+      
+             <div id="cuadro-buscador">
+	<form action="buscador.php" method="post" name="buscar" target="_self" class="form-wrapper cf" id="buscar">
+ 
+    <input required placeholder="Buscar..." name="busca" type="text" id="busca" title="Buscar">
+	
+    <img src="images/icono-buscador.png" width="21" height="21" />
+    </form>
+    
+   	  </div>
+    </div>
+ </div>
+   
+      <div id="menu">
+        <div id="menu-principal">
+	<div id="contenedor-botones">
+		<ul class="dropdown dropdown-horizontal">
+			<li><a href="index.php" class="dir" accesskey="1">INICIO</a></li>
+			<li><a href="articulo_princ.php?secc=1&amp;sub_secc=1" class="dir" accesskey="2">ELECTORES</a>
+				<ul>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=1">Concepto del Elector</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=2">Padr&oacute;n Electoral</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=3">Capacitaci&oacute;n Electoral</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=4">Afiliados a Partidos Pol&iacute;ticos</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=5">Residentes en el Exterior</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=44">Extranjeros en la Argentina</a></li>
+		            <li><a href="articulo_princ.php?secc=1&amp;sub_secc=41">Privados de la Libertad</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=6">Voto Accesible</a></li>
+					<li><a href="articulo_princ.php?secc=1&amp;sub_secc=7">Electores en Redes</a></li>
+				</ul>
+			</li>
+    
+			<li><a href="articulo_princ.php?secc=2&amp;sub_secc=8" class="dir" accesskey="3">ELECCIONES</a>
+				<ul>
+					<li><a href="articulo_princ.php?secc=2&amp;sub_secc=8">PASO 2015</a></li>
+					
+            		<li><a href="articulo_princ.php?secc=2&amp;sub_secc=39">Novedades</a></li>
+					<li><a href="articulo_princ.php?secc=2&amp;sub_secc=9">Resultados y Estad&iacute;sticas</a></li>
+					<li><a href="articulo_princ.php?secc=2&amp;sub_secc=10">Cartograf&iacute;a: Nuevos Circuitos</a></li>
+					<li><a href="articulo_princ.php?secc=2&amp;sub_secc=11">&Oacute;rganos Electorales</a></li>
+					<li><a href="articulo_princ.php?secc=2&amp;sub_secc=12">Elecciones en el mundo</a></li>
+				</ul>
+			</li>
+
+			<li><a href="articulo_sub_sub.php?secc=3&amp;sub_secc=13&amp;sub_sub_secc=12" class="dir" accesskey="4">AGRUPACIONES POL&Iacute;TICAS</a>
+				<ul>
+					<li><a href="articulo_sub_sub.php?secc=3&amp;sub_secc=13&amp;sub_sub_secc=12">Atribuciones y Conformaci&oacute;n</a></li>
+					<li><a href="articulo_sub_sub.php?secc=3&amp;sub_secc=14&amp;sub_sub_secc=28">N&oacute;mina de Partidos Pol&iacute;ticos</a></li>
+					<li><a href="articulo_princ.php?secc=3&amp;sub_secc=15">Financiamiento</a></li>
+					<li><a href="articulo_princ.php?secc=3&amp;sub_secc=16">Publicidad Electoral en SCA</a></li>
+					<li><a href="articulo_princ.php?secc=3&amp;sub_secc=42">Notificaciones a Agrupaciones Pol&iacute;ticas</a></li>
+					<li><a href="articulo_princ.php?secc=3&amp;sub_secc=17">Consejo de Seguimiento</a></li>
+				</ul>
+			</li>
+
+			<li><a href="http://campus.elecciones.gob.ar" class="dir"  target="_blank" accesskey="5">CAMPUS</a>
+				<ul>
+					<li><a href="http://campus.elecciones.gob.ar" target="_blank">Plataforma de Capacitaci&oacute;n Virtual</a></li>
+				</ul>
+			</li>
+    
+			<li><a href="articulo_princ.php?secc=4&amp;sub_secc=18" class="dir" accesskey="6">NORMATIVA</a>
+				<ul>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=18">Constituci&oacute;n Nacional</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=19">C&oacute;digo Electoral Nacional</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=37">Elecci&oacute;n de Parlamentarios del Mercosur</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=20">Ciudadan&iacute;a Argentina</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=21">Democratizaci&oacute;n de la Representaci&oacute;n Pol&iacute;tica</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=22">Org&aacute;nica de Partidos Pol&iacute;ticos</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=23">Financiamiento de los Partidos Pol&iacute;ticos</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=24">Simultaneidad de Elecciones</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=25">Electores Residentes en el Exterior</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=26">Electores Privados de la Libertad</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=27">Consulta Popular</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=28">Iniciativa Popular</a></li>
+					<li><a href="articulo_princ.php?secc=4&amp;sub_secc=29">Otras Normas</a></li>
+				</ul>
+			</li>
+
+			<li><a href="articulo_princ.php?secc=5&amp;sub_secc=30" class="dir" accesskey="7">INSTITUCIONAL</a>
+				<ul>
+					<li><a href="articulo_princ.php?secc=5&amp;sub_secc=30">La Dine</a></li>
+					<li><a href="articulo_princ.php?secc=5&amp;sub_secc=31">Autoridades</a></li>
+					<li><a href="articulo_princ.php?secc=5&amp;sub_secc=32">Coordinaci&oacute;n Institucional</a></li>
+					<li><a href="articulo_princ.php?secc=5&amp;sub_secc=33">Publicaciones</a></li>
+		            <li><a href="articulo_princ.php?secc=5&amp;sub_secc=40">Relaciones Internacionales</a></li>
+					<li><a href="contacto.php" accesskey="8">Contacto</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+  </div>
+  
+  
+  
+      <div id="contenido">
+      
+        <div id="menu-contenido">
+        
+       <a href=""> <h1 class="titulo-seccion">Elecciones</h1>
+       </a>
+        
+                <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=8" id="back-menu">Elecciones 2015</a>
+
+                <div>
+
+                    <ul>
+<a href="articulo_sub_sub.php?secc=2&sub_secc=8&sub_sub_secc=63">
+                        <li class="sub-seccion">Listas Participantes </li></a>
+<a href="articulo_sub_sub.php?secc=2&sub_secc=8&sub_sub_secc=64">
+                        <li class="sub-seccion">Recuento Provisional </li></a>
+
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+        <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=39" id="back-menu">Novedades</a>
+
+            </li>
+
+        </ul>
+
+        <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=9" id="back-menu">Resultados y Estadísticas</a>
+
+                <div>
+
+                    <ul>
+<a href="articulo_sub_sub.php?secc=2&sub_secc=9&sub_sub_secc=9">
+                        <li class="sub-seccion">Resultados Historicos </li></a>
+
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+        <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=10" id="back-menu">Cartografía: Nuevos Circuitos</a>
+
+            </li>
+
+        </ul>
+
+        <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=11" id="back-menu">Órganos Electorales</a>
+
+                <div>
+
+                    <ul>
+<a href="articulo_sub_sub.php?secc=2&sub_secc=11&sub_sub_secc=10">
+                        <li class="sub-seccion">Justicia Nacional </li></a>
+<a href="articulo_sub_sub.php?secc=2&sub_secc=11&sub_sub_secc=11">
+                        <li class="sub-seccion">Órganos Electorales Provinciales </li></a>
+
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+        <ul class="menu-contenido">
+
+            <li class="titulo-sub-seccion">
+
+                <a href="articulo_princ.php?secc=2&sub_secc=12" id="back-menu">Elecciones en el mundo</a>
+
+            </li>
+
+        </ul>
+
+        
+        </div>
+        
+        <div id="texto-contenido">
+        
+        <h1 class="breadcrumb">
+        
+        <a href="">Elecciones</a> > 
+        
+        <a href="">Elecciones 2015</a> 
+        
+        > Listas Participantes        
+        <div id="texto-size">
+          <input id="achicar" title="Achicar texto" type="button" value="A-" />
+          <input id="normal" title="Texto normal" type="button" value="A" />
+          <input id="agrandar" title="Agrandar texto" type="button" value="A+" />
+        </div>
+
+        </h1>
+        
+        <h1 class="titulo-nota">Agrupaciones y Listas Participantes</h1>
+        
+        <div class="parrafo-nota"><p>&nbsp;</p>
+
+<h2><img alt="capital" src="/admin/ckfinder/userfiles/images/rep-arg.jpg" style="opacity: 0.9; height: 49px; width: 150px;" /></h2>
+
+<p><a href="/admin/ckfinder/userfiles/files/PRESIDENTE%20Y%20VICEPRESIDENTE.pdf">Presidente y Vicepresidente</a></p>
+
+<p><a href="/admin/ckfinder/userfiles/files/PARLAMENTARIO%20MERCOSUR%20DISTRITO%20NACIONAL(1).pdf">Parlamentarios del MERCOSUR Distrito Nacional</a></p>
+
+<p>&nbsp;</p>
+
+<h2>Por distrito</h2>
+
+<p><a href="/admin/ckfinder/userfiles/files/BUENOS%20AIRES.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="capital" src="/admin/ckfinder/userfiles/images/bsas(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CORRIENTES.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="corrientes" src="/admin/ckfinder/userfiles/images/corrientes(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/MENDOZA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="mendoza" src="/admin/ckfinder/userfiles/images/mendoza(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SAN%20LUIS.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="san luis" src="/admin/ckfinder/userfiles/images/san-luis(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CAPITAL%20FEDERAL.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="caba" src="/admin/ckfinder/userfiles/images/caba(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/ENTRE%20RIOS.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="entre rios" src="/admin/ckfinder/userfiles/images/entre-rios(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/MISIONES.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="misiones" src="/admin/ckfinder/userfiles/images/misiones(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SANTA%20CRUZ.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="santa cruz" src="/admin/ckfinder/userfiles/images/santa-cruz(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CATAMARCA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="catamarca" src="/admin/ckfinder/userfiles/images/catamarca(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/FORMOSA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="formosa" src="/admin/ckfinder/userfiles/images/formosa(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/NEUQUEN.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="neuquen" src="/admin/ckfinder/userfiles/images/neuquen(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SANTA%20FE.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="santa fe" src="/admin/ckfinder/userfiles/images/santa-fe(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CHACO.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="chaco" src="/admin/ckfinder/userfiles/images/chaco(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/JUJUY.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="jujuy" src="/admin/ckfinder/userfiles/images/jujuy(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/RIO%20NEGRO.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="rio negro" src="/admin/ckfinder/userfiles/images/rio-negro(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SANTIAGO%20DEL%20ESTERO.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="santiago del estero" src="/admin/ckfinder/userfiles/images/santiago(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CHUBUT.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="chubut" src="/admin/ckfinder/userfiles/images/chubut(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/LA%20PAMPA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="la pampa" src="/admin/ckfinder/userfiles/images/la-pampa(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SALTA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="salta" src="/admin/ckfinder/userfiles/images/salta(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/TIERRA%20DEL%20FUEGO.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="tierra del fuego" src="/admin/ckfinder/userfiles/images/tierra-del-fuego(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/CORDOBA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="cordoba" src="/admin/ckfinder/userfiles/images/cordoba(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/LA%20RIOJA.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="la rioja" src="/admin/ckfinder/userfiles/images/la-rioja(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/SAN%20JUAN.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="san juan" src="/admin/ckfinder/userfiles/images/san-juan(1).jpg" style="height: 49px; width: 150px;" /></a><a href="/admin/ckfinder/userfiles/files/TUCUMAN.pdf" style="text-decoration: none; color: rgb(8, 68, 108); font-weight: bold;"><img alt="tucuman" src="/admin/ckfinder/userfiles/images/tucuman(1).jpg" style="height: 49px; width: 150px;" /></a></p>
+
+<div>&nbsp;</div>
+</div>
+        
+        <p>&nbsp;</p>
+         <p class="parrafo-nota">Compart&iacute; esta informaci&oacute;n</p> 
+         <div class="addthis_sharing_toolbox"></div>
+        </div>
+        
+        
+      
+      
+      
+      
+      </div>
+        
+        
+      
+     
+     
+  
+      
+      
+      <div id="socalo">
+      
+       <table id="socalo-menu">
+
+	
+		<caption><span class="screen-reader-text">Menu socalo</span></caption>
+	
+
+  <tr>
+  
+<th>
+<ul class="socalo">
+	<li class="socalo"><p class="titulo-socalo">ELECTORES</p></li>
+
+    <li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=1">Concepto del Elector</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=2">Padr&oacute;n Electoral</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=3">Capacitaci&oacute;n Electoral</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=4">Afiliados a Partidos Pol&iacute;ticos</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=5">Residentes en el Exterior</a></li>
+    <li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=44">Extranjeros en la Argentina</a></li>
+    <li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=41">Privados de la Libertad</a></li>
+    
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=6">Voto Accesible</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=1&amp;sub_secc=7">Electores en Redes</a></li>
+    
+    <li class="socalo"><p class="titulo-socalo">CAMPUS</p></li>
+    <li class="socalo"><a href="http://campus.elecciones.gob.ar"  target="_blank">Plataforma de Capacitaci&oacute;n Virtual</a></li>
+    
+</ul>
+
+</th>
+    
+<th>  
+<ul class="socalo">
+	<li class="socalo"><p class="titulo-socalo">ELECCIONES</p></li>
+ 	<li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=8">PASO 2015</a></li>
+    
+    <li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=39">Novedades</a></li>
+    <li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=9">Resultados y Estad&iacute;sticas</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=10">Cartograf&iacute;a: Nuevos Circuitos</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=11">&Oacute;rganos Electorales</a></li>
+	<li class="socalo"><a href="articulo_princ.php?secc=2&amp;sub_secc=12">Elecciones en el mundo</a></li>
+</ul>
+</th>
+    
+<th>
+<ul class="socalo">
+    	<li class="socalo"><p class="titulo-socalo">AGRUPACIONES POLITICAS</p></li>
+		<li class="socalo"><a href="articulo_sub_sub.php?secc=3&amp;sub_secc=13&amp;sub_sub_secc=12">Atribuciones y Conformaci&oacute;n</a></li>
+		<li class="socalo"><a href="articulo_sub_sub.php?secc=3&amp;sub_secc=14&amp;sub_sub_secc=28">N&oacute;mina de Partidos Pol&iacute;ticos</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=3&amp;sub_secc=15">Financiamiento</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=3&amp;sub_secc=16">Publicidad Electoral en SCA</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=3&amp;sub_secc=42">Notificaciones a Agrupaciones Pol&iacute;ticas</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=3&amp;sub_secc=17">Consejo de Seguimiento</a></li>
+
+</ul>
+</th>
+    
+<th>
+<ul class="socalo">    
+		<li class="socalo"><p class="titulo-socalo">NORMATIVA</p></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=18">Constituci&oacute;n Nacional</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=19">C&oacute;digo Electoral Nacional</a></li>
+        
+        <li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=37">Elecci&oacute;n de Parlamentarios del Mercosur</a></li>
+        
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=20">Ciudadan&iacute;a Argentina</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=21">Democratizaci&oacute;n de la Representaci&oacute;n Pol&iacute;tica</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=22">Org&aacute;nica de Partidos Pol&iacute;ticos</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=23">Financiamiento de los Partidos Pol&iacute;ticos</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=24">Simultaneidad de Elecciones</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=25">Electores Residentes en el Exterior</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=26">Electores Privados de la Libertad</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=27">Consulta Popular</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=28">Iniciativa Popular</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=4&amp;sub_secc=29">Otras Normas</a></li>
+</ul>
+</th>
+    
+<th>
+<ul class="socalo">   	
+		<li class="socalo"><p class="titulo-socalo">INSTITUCIONAL</p></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=5&amp;sub_secc=30">La Dine</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=5&amp;sub_secc=31">Autoridades</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=5&amp;sub_secc=32">Coordinaci&oacute;n Institucional</a></li>
+		<li class="socalo"><a href="articulo_princ.php?secc=5&amp;sub_secc=33">Publicaciones</a></li>
+        
+        <li class="socalo"><a href="articulo_princ.php?secc=5&amp;sub_secc=40">Relaciones Internacionales</a></li>
+        
+	
+		<li class="socalo"><a href="contacto.php">Contacto</a></li>
+</ul>
+    </th>
+    
+  </tr>
+
+</table>
+      
+      </div>
+      
+      
+   <div id="pie-de-pagina">
+      
+    <div id="info-pie">      
+      <p class="pie">
+      25 de Mayo 101/145 | C1002ABC | Ciudad Aut&oacute;noma de Buenos Aires | Tel: (011)4346-1841/2 | elecciones@elecciones.gob.ar
+      </p>
+     </div>
+      
+     <div id="iconos-accesibilidad">
+      <img src="images/valid-xhtml10-blue.png" width="66" height="23" />
+      
+      <img src="images/vcss-blue.gif" width="66" height="23" />
+      
+      <img src="images/wcag2AA-blue.png" width="66" height="23" /> </div>
+      
+      
+      </div>
+      
+      
+      
+      
+     
+     
+     
+  </div>
+
+<script type="text/javascript">
+<!--
+var Accordion1 = new Spry.Widget.Accordion("Accordion1", { useFixedPanelHeights: false, defaultPanel: -1 });
+var Accordion2 = new Spry.Widget.Accordion("Accordion2", { useFixedPanelHeights: false, defaultPanel: -1 });
+//-->
+</script>
+
+
+
+
+</body>
+</html>

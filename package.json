@@ -1,0 +1,11 @@
+{
+  "name": "dinescrap",
+  "version": "1.0.0",
+  "description": "Scrapper de las listas de candidatos publicadas por la DINE www.elecciones.gov.ar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martín Szyszlican",
+  "license": "GPL-3.0"
+}
