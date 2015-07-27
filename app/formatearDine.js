@@ -3,7 +3,7 @@ var fs = require('fs');
 var Estados = {
     inicio      : /^\s*AGRUPACIONES\sY\sLISTAS$/,
     lista: /^(\d+)\s-\s(.+),\sLISTA:(.+)\.\s(.+)*$/,
-    candidato   : /^\s+(\d{1,3}).\s+(.+)$/,
+    candidato   : /^\s+(\d{1,3})\.\s+(.+)$/,
     vacio       : /^\s*$/
 };
 
@@ -70,7 +70,7 @@ var analyzer = function(lines,prov){
 
             } else if(isCandidato){
                 actual.posicion    = isCandidato[1];
-                actual.nombre    = isCandidato[2];
+                actual.nombre    = isCandidato[2].replace("\"","\\\"").replace("volver","").trim();
                 imprimirFila(actual);
             }
             i++;
