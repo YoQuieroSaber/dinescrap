@@ -70,7 +70,7 @@ var analyzer = function(lines,prov){
 
             } else if(isCandidato){
                 actual.posicion    = isCandidato[1];
-                actual.nombre    = isCandidato[2].replace("\"","\\\"").replace("volver","").trim();
+                actual.nombre    = isCandidato[2].replace(/\"/g,"\\\"").replace("volver","").trim();
                 imprimirFila(actual);
             }
             i++;
