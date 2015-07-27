@@ -115,6 +115,9 @@ function parseProv(prov,ifile) {
             return console.log(err);
           }
 
+
+          data = data.replace(/\n([^\d\s])/gi," $1");
+
           var resp = analyzer(data.split('\n'),prov);
 
           ofile = "../salida/"+prov+".csv";
